@@ -1,0 +1,405 @@
+/* Genel Stiller */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Header Stili */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #555;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+#modeToggle:hover {
+    color: #333;
+}
+
+/* Hakkımda Bölümü Stili */
+#about .timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#about .timeline > div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#about .timeline > div:hover {
+    transform: translateY(-5px);
+}
+
+/* Projelerim Bölümü Stili */
+#projects .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.filter-btn {
+    background-color: #fff;
+    color: #3498db;
+    border: 2px solid #3498db;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    outline: none;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#projects .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+
+.project-card p {
+    padding: 20px;
+    margin: 0;
+}
+
+.project-card a {
+    display: block;
+    padding: 15px 20px;
+    background-color: #e7f5ff;
+    text-align: center;
+    border-top: 1px solid #d4e9ff;
+}
+
+/* Yorumlar Bölümü Stili */
+#testimonials {
+    background-color: #f0f8ff;
+}
+
+#testimonials .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+#testimonials blockquote {
+    background-color: #fff;
+    padding: 30px;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    font-size: 1.2em;
+    color: #555;
+    margin: 20px;
+    position: relative;
+}
+
+#testimonials blockquote span {
+    display: block;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.like-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #aaa;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.like-btn:hover {
+    color: #3498db;
+}
+
+/* İletişim Bölümü Stili */
+#contact form {
+    display: grid;
+    gap: 20px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#contact textarea {
+    min-height: 150px;
+}
+
+#contact button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Stili */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Karanlık Tema Stilleri */
+body.dark-mode {
+    background-color: #222;
+    color: #eee;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #eee;
+}
+
+body.dark-mode p {
+    color: #ccc;
+}
+
+body.dark-mode header {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #modeToggle {
+    color: #ccc;
+}
+
+body.dark-mode #modeToggle:hover {
+    color: #eee;
+}
+
+body.dark-mode #about .timeline > div {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+    color: #ccc;
+}
+
+body.dark-mode #projects .filter-btn {
+    background-color: #333;
+    color: #3498db;
+    border-color: #3498db;
+}
+
+body.dark-mode #projects .filter-btn.active,
+body.dark-mode #projects .filter-btn:hover {
+    background-color: #3498db;
+    color: #333;
+}
+
+body.dark-mode .project-card {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .project-card h3 {
+    background-color: #444;
+    color: #eee;
+}
+
+body.dark-mode .project-card a {
+    background-color: #444;
+    color: #add8e6;
+    border-top-color: #555;
+}
+
+body.dark-mode #testimonials {
+    background-color: #333;
+}
+
+body.dark-mode #testimonials blockquote {
+    background-color: #444;
+    color: #ddd;
+    border-left-color: #3498db;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #testimonials blockquote span {
+    color: #bbb;
+}
+
+body.dark-mode .like-btn {
+    color: #888;
+}
+
+body.dark-mode #contact input[type="text"],
+body.dark-mode #contact input[type="email"],
+body.dark-mode #contact textarea {
+    background-color: #333;
+    color: #eee;
+    border-color: #555;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+/* Duyarlılık */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    #about .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    #projects .filters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #projects .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    #testimonials .container {
+        padding: 30px 15px;
+    }
+
+    #testimonials blockquote {
+        margin: 15px;
+        padding: 20px;
+        font-size: 1em;
+    }
+}
